@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_kyPTcOWBEeewVfK7eoB6IQ" name="simple-machine">
+  <packagedElement xmi:type="uml:StateMachine" xmi:id="_k1qa4OWBEeewVfK7eoB6IQ" name="StateMachine1">
+    <region xmi:type="uml:Region" xmi:id="_lKSnEOWBEeewVfK7eoB6IQ" name="Region1">
+      <transition xmi:type="uml:Transition" xmi:id="__CazcObFEeelJtjbBpIu9Q" source="_9XaqMObFEeelJtjbBpIu9Q" target="_1zp90ObFEeelJtjbBpIu9Q"/>
+      <transition xmi:type="uml:Transition" xmi:id="_GPgsQObGEeelJtjbBpIu9Q" source="_1zp90ObFEeelJtjbBpIu9Q" target="_6i7JUObFEeelJtjbBpIu9Q">
+        <trigger xmi:type="uml:Trigger" xmi:id="__SW3cObGEeelJtjbBpIu9Q" event="_YMJQ8ObGEeelJtjbBpIu9Q"/>
+      </transition>
+      <transition xmi:type="uml:Transition" xmi:id="_9xUtEObHEeelJtjbBpIu9Q" source="_6i7JUObFEeelJtjbBpIu9Q" target="_6GuqoObHEeelJtjbBpIu9Q">
+        <trigger xmi:type="uml:Trigger" xmi:id="_HDL6AObIEeelJtjbBpIu9Q" event="_NlN5EObHEeelJtjbBpIu9Q"/>
+      </transition>
+      <transition xmi:type="uml:Transition" xmi:id="_STgXsObIEeelJtjbBpIu9Q" source="_6GuqoObHEeelJtjbBpIu9Q" target="_NRTpIObIEeelJtjbBpIu9Q">
+        <trigger xmi:type="uml:Trigger" xmi:id="_Z5WuwObIEeelJtjbBpIu9Q" event="_U66e0ObIEeelJtjbBpIu9Q"/>
+      </transition>
+      <subvertex xmi:type="uml:State" xmi:id="_1zp90ObFEeelJtjbBpIu9Q" name="S1"/>
+      <subvertex xmi:type="uml:State" xmi:id="_6i7JUObFEeelJtjbBpIu9Q" name="S2"/>
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_9XaqMObFEeelJtjbBpIu9Q"/>
+      <subvertex xmi:type="uml:State" xmi:id="_6GuqoObHEeelJtjbBpIu9Q" name="S3"/>
+      <subvertex xmi:type="uml:State" xmi:id="_NRTpIObIEeelJtjbBpIu9Q" name="S4"/>
+    </region>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Signal" xmi:id="_Nm6XoObGEeelJtjbBpIu9Q" name="E1"/>
+  <packagedElement xmi:type="uml:SignalEvent" xmi:id="_YMJQ8ObGEeelJtjbBpIu9Q" name="SignalEvent1" signal="_Nm6XoObGEeelJtjbBpIu9Q"/>
+  <packagedElement xmi:type="uml:TimeEvent" xmi:id="_NlN5EObHEeelJtjbBpIu9Q" name="TimeEvent1">
+    <when xmi:type="uml:TimeExpression" xmi:id="_p-5EYObHEeelJtjbBpIu9Q">
+      <expr xmi:type="uml:LiteralInteger" xmi:id="_p-5EYebHEeelJtjbBpIu9Q" value="1000"/>
+    </when>
+  </packagedElement>
+  <packagedElement xmi:type="uml:TimeEvent" xmi:id="_U66e0ObIEeelJtjbBpIu9Q" name="TimeEvent2" isRelative="true">
+    <when xmi:type="uml:TimeExpression" xmi:id="_X5ZpMObIEeelJtjbBpIu9Q">
+      <expr xmi:type="uml:LiteralInteger" xmi:id="_X5ZpMebIEeelJtjbBpIu9Q" value="2000"/>
+    </when>
+  </packagedElement>
+  <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_YwEsoOWCEeewVfK7eoB6IQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_YwEsoeWCEeewVfK7eoB6IQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
+    </eAnnotations>
+    <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
+  </profileApplication>
+</uml:Model>

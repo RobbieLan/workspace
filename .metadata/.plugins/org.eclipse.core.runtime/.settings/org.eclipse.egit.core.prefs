@@ -1,0 +1,5 @@
+GitRepositoriesView.GitDirectories=D\:\\workspace\\droolsdemo\\.git;D\:\\workspace\\drools-examples\\.git;D\:\\workspace\\drools\\droolsdemo\\.git;D\:\\workspace\\droolsgit\\.git;D\:\\workspace\\drools\\drools-examples\\.git;
+GitRepositoriesView.GitDirectories.relative=droolsdemo\\.git;drools-examples\\.git;drools\\droolsdemo\\.git;droolsgit\\.git;drools\\drools-examples\\.git;
+RepositorySearchDialogSearchPath=D\:\\workspace\\droolsgit
+core_autoIgnoreDerivedResources=false
+eclipse.preferences.version=1

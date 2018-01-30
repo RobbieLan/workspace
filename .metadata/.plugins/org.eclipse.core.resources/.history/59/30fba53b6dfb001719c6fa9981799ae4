@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="droolsgit">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/drools-beliefs/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/drools-beliefs/src/test/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/drools-cdi/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/drools-cdi/src/test/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/drools-compiler/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/drools-compiler/src/test/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/drools-compiler/src/test/resources"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/drools-core/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/drools-core/src/test/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/drools-decisiontables/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/drools-decisiontables/src/test/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/drools-examples/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/drools-examples-api/default-kiesession/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/drools-examples-api/default-kiesession/src/test/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/drools-examples-api/default-kiesession-from-file/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/drools-examples-api/default-kiesession-from-file/src/test/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/drools-examples-api/kie-module-from-multiple-files/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/drools-examples-api/kie-module-from-multiple-files/src/test/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/drools-examples-api/kiebase-inclusion/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/drools-examples-api/kiebase-inclusion/src/test/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/drools-examples-api/kiecontainer-from-kierepo/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/drools-examples-api/kiecontainer-from-kierepo/src/test/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/drools-examples-api/kiefilesystem-example/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/drools-examples-api/kiefilesystem-example/src/test/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/drools-examples-api/kiemodulemodel-example/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/drools-examples-api/kiemodulemodel-example/src/test/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/drools-examples-api/multiple-kbases/src/test/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/drools-examples-api/named-kiesession/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/drools-examples-api/named-kiesession/src/test/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/drools-examples-api/named-kiesession-from-file/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/drools-examples-api/named-kiesession-from-file/src/test/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/drools-examples-api/reactive-kiesession/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/drools-examples-api/reactive-kiesession/src/test/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/drools-examples-api/ruleunit/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/drools-examples-api/ruleunit/src/test/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/drools-examples-cdi/cdi-example/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/drools-examples-cdi/cdi-example/src/test/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/drools-examples-cdi/cdi-example-scopes/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/drools-examples-cdi/cdi-example-scopes/src/test/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/drools-examples-cdi/cdi-example-with-inclusion/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/drools-examples-cdi/cdi-example-with-inclusion/src/test/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/drools-model/drools-canonical-model/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/drools-model/drools-canonical-model/src/test/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/drools-model/drools-model-compiler/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/drools-model/drools-model-compiler/src/test/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/drools-persistence/drools-persistence-api/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/drools-persistence/drools-persistence-jpa/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/drools-persistence/drools-persistence-jpa/src/test/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/drools-pmml/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/drools-pmml/src/test/java"/>
+        <property name="context-root" value="droolsgit"/>
+        <property name="java-output-path" value="/droolsgit/bin"/>
+    </wb-module>
+</project-modules>

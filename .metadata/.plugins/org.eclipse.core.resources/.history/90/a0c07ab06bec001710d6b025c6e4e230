@@ -1,0 +1,202 @@
+package com.lambda.stream;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.IntSummaryStatistics;
+import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
+import java.util.function.Consumer;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
+
+import com.lambda.stream.Person;
+/**
+ * Using Lambda With Stream
+ * 
+ * Usage of stream include three parts: initialization, conversion, aggregation
+ * Conversion of stream: filter,distinct,map,flatMap,peek,limit,skip
+ * Aggregation of stream: collect,reduce,count,max,min,
+ * */
+public class StreamLambda {
+
+	private static List<Person> javaProgrammers;
+	private static List<Person> phpProgrammers;
+
+	public static void main(String[] args) {
+		/*1 Use forEach to iterate*/
+		//User forEach to display all
+		System.out.println("Display all programmers:");
+		javaProgrammers.forEach((p) -> System.out.printf("%s %s; ", p.getFirstName(), p.getLastName()));
+		phpProgrammers.forEach((p) -> System.out.printf("%s %s; ", p.getFirstName(), p.getLastName()));
+		
+		//User forEach to set each collection element
+		System.out.println("Add 5% salary for all programmers:");
+		Consumer<Person> giveRaise = e -> e.setSalary(e.getSalary() / 100 * 5 + e.getSalary());
+		javaProgrammers.forEach(giveRaise);
+		phpProgrammers.forEach(giveRaise);
+		javaProgrammers.forEach((j) -> System.out.println(j.getSalary()));
+		
+		//Traditional way to set collection element
+		List<Integer> costBeforeTax = Arrays.asList(100, 200, 300, 400, 500);
+		for (Integer cost : costBeforeTax) {
+		    double price = cost + .12*cost;
+		    System.out.println(price);
+		}
+		 
+		//Lambda way to set collection element
+		List<Integer> costBeforeTax2 = Arrays.asList(100, 200, 300, 400, 500);
+		costBeforeTax.stream().map((cost) -> cost + .12*cost).forEach(System.out::println);
+		//Another example of lambda way
+		List<String> G7 = Arrays.asList("USA", "Japan", "France", "Germany", "Italy", "U.K.","Canada");
+		String G7Countries = G7.stream().map(x -> x.toUpperCase()).collect(Collectors.joining(", "));
+		System.out.println(G7Countries);
+		
+		
+		/*2 Use Stream as filters*/
+		System.out.println("Display PHP programmers who has a salary more than 1400");
+		phpProgrammers.stream().filter((p) -> (p.getSalary() > 1400))
+				.forEach((p) -> System.out.printf("%s %s; ", p.getFirstName(), p.getLastName()));
+
+		//Construct filters with Predicate
+		Predicate<Person> ageFilter = (p) -> (p.getAge() > 25);
+		Predicate<Person> salaryFilter = (p) -> (p.getSalary() > 1400);
+		Predicate<Person> genderFilter = (p) -> ("female".equals(p.getGender()));
+
+		System.out.println("Display those who satisfy the folloing contions: age>25, sal>1400, gender=female:");
+		phpProgrammers.stream().filter(ageFilter).filter(salaryFilter).filter(genderFilter)
+				.forEach((p) -> System.out.printf("%s %s; ", p.getFirstName(), p.getLastName()));
+
+		System.out.println("Top three in javaProgrammer list:");
+		javaProgrammers.stream().limit(3)
+				.forEach((p) -> System.out.printf("%s %s; ", p.getFirstName(), p.getLastName()));
+
+		System.out.println("Top three female Java programmers:");
+		javaProgrammers.stream().filter(genderFilter).limit(3)
+				.forEach((p) -> System.out.printf("%s %s; ", p.getFirstName(), p.getLastName()));
+		
+		long femaleAmount=phpProgrammers.stream().filter(p->p.getGender().equals("female")).count();
+		System.out.println("Amount of female php programmers:"+femaleAmount);
+		List<Person> femaleList=phpProgrammers.stream().filter(p->p.getGender().equals("female")).collect(Collectors.toList());
+		femaleList.forEach(p->System.out.println(p.getFirstName()));
+		
+		/*3 User Stream to sort */
+		System.out.println("Display top 5 Java programmers with alphabet sort of firstnames:");
+		List<Person> sortedJavaProgrammers = javaProgrammers.stream()
+				.sorted((p, p2) -> (p.getFirstName().compareTo(p2.getFirstName())))
+				.limit(5)
+				.collect(Collectors.toList());
+
+		sortedJavaProgrammers.forEach((p) -> System.out.printf("%s %s; %n", p.getFirstName(), p.getLastName()));
+
+		System.out.println("Sort of salary of Java programmers:");
+		sortedJavaProgrammers = javaProgrammers
+				.stream()
+				.sorted((p, p2) -> (p.getSalary() - p2.getSalary()))
+				.collect(Collectors.toList());
+
+		sortedJavaProgrammers.forEach((p) -> System.out.printf("%s %s; %n", p.getFirstName(), p.getLastName()));
+		
+		System.out.println("Who has the lowest salary of Java programmers:");  
+		Person pers = javaProgrammers  
+		          .stream()  
+		          .min((p1, p2) -> (p1.getSalary() - p2.getSalary()))  
+		          .get();
+		  
+		System.out.printf("Name: %s %s; Salary: $%,d.", pers.getFirstName(), pers.getLastName(), pers.getSalary());  
+		  
+		System.out.println("Who has the highest salary of Java programmers:");  
+		Person person = javaProgrammers  
+		          .stream()  
+		          .max((p, p2) -> (p.getSalary() - p2.getSalary()))  
+		          .get();
+		  
+		System.out.printf("Name: %s %s; Salary: $%,d.", person.getFirstName(), person.getLastName(), person.getSalary()); 
+	
+		System.out.println("Join php programmers' firstname with ';' :");  
+		String phpDevelopers = phpProgrammers  
+		          .stream()  
+		          .map(Person::getFirstName)  
+		          .collect(Collectors.joining(" ; ")); // may be used as token is hereafter processings?  
+		System.out.println(phpDevelopers);
+		  
+		System.out.println("Put Java programmers' first name in Set:");  
+		Set<String> javaDevFirstName = javaProgrammers  
+		          .stream()  
+		          .map(Person::getFirstName)  
+		          .collect(Collectors.toSet());  
+		  
+		System.out.println("Put Java programmers' first name in TreeSet:");  
+		TreeSet<String> javaDevLastName = javaProgrammers  
+		          .stream()  
+		          .map(Person::getLastName)  
+		          .collect(Collectors.toCollection(TreeSet::new));  
+		
+		/*4 Parallel streams */
+		System.out.println("Sum of all Java programmers' salary:");  
+		int totalSalary = javaProgrammers  
+		          .parallelStream()  
+		          .mapToInt(p -> p.getSalary())  
+		          .sum();
+		
+		
+		/*5 Use summaryStatistics to count, min, max, sum, and average for numbers  */
+		List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);  
+		IntSummaryStatistics stats = numbers  
+		          .stream()  
+		          .mapToInt((x) -> x)  
+		          .summaryStatistics();  
+		  
+		System.out.println("Max number : " + stats.getMax());  
+		System.out.println("Min number : " + stats.getMin());  
+		System.out.println("Sum of numbers   : " + stats.getSum());  
+		System.out.println("Avg value of numbers :" + stats.getAverage());  
+		
+	}
+
+	static {
+		javaProgrammers = new ArrayList<Person>();
+		javaProgrammers.add(new Person("Elsdon", "Jaycob", "Java programmer", "male", 43, 2000));
+		javaProgrammers.add(new Person("Tamsen", "Brittany", "Java programmer", "female", 23, 1500));
+		javaProgrammers.add(new Person("Floyd", "Donny", "Java programmer", "male", 33, 1800));
+		javaProgrammers.add(new Person("Sindy", "Jonie", "Java programmer", "female", 32, 1600));
+		javaProgrammers.add(new Person("Vere", "Hervey", "Java programmer", "male", 22, 1200));
+		javaProgrammers.add(new Person("Maude", "Jaimie", "Java programmer", "female", 27, 1900));
+		javaProgrammers.add(new Person("Shawn", "Randall", "Java programmer", "male", 30, 2300));
+		javaProgrammers.add(new Person("Jayden", "Corrina", "Java programmer", "female", 35, 1700));
+		javaProgrammers.add(new Person("Palmer", "Dene", "Java programmer", "male", 33, 2000));
+		javaProgrammers.add(new Person("Addison", "Pam", "Java programmer", "female", 34, 1300));
+
+		phpProgrammers = new ArrayList<Person>() {
+			{
+				add(new Person("Jarrod", "Pace", "PHP programmer", "male", 34, 1550));
+				add(new Person("Clarette", "Cicely", "PHP programmer", "female", 23, 1200));
+				add(new Person("Victor", "Channing", "PHP programmer", "male", 32, 1600));
+				add(new Person("Tori", "Sheryl", "PHP programmer", "female", 21, 1000));
+				add(new Person("Osborne", "Shad", "PHP programmer", "male", 32, 1100));
+				add(new Person("Rosalind", "Layla", "PHP programmer", "female", 25, 1300));
+				add(new Person("Fraser", "Hewie", "PHP programmer", "male", 36, 1100));
+				add(new Person("Quinn", "Tamara", "PHP programmer", "female", 21, 1000));
+				add(new Person("Alvin", "Lance", "PHP programmer", "male", 38, 1600));
+				add(new Person("Evonne", "Shari", "PHP programmer", "female", 40, 1800));
+			}
+		};
+		
+	}
+	Phone applePhone=new Phone("iPhoneX", "9999");
+	Phone sumsungPhone=new Phone("GalaxyS", "7999");
+	Phone miPhone=new Phone("Note7", "999");
+	Set<Phone> phones=new HashSet<Phone>() {
+		{
+			add(applePhone);
+			add(sumsungPhone);
+			add(miPhone);
+		}
+	};
+	Person phoneProgrammer=new Person("LeiJun", "Lei", "CEO", "male", 12000, 55, phones);
+/*
+ * https://www.cnblogs.com/franson-2016/p/5593080.html
+ * http://ifeve.com/stream/
+ * */
+}

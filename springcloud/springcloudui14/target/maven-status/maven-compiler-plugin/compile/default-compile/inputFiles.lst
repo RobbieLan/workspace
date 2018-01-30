@@ -1,0 +1,8 @@
+D:\workspace\springcloudui14\src\main\java\com\wisely\ui\service\hims\PersonRemoteService.java
+D:\workspace\springcloudui14\src\main\java\com\wisely\ui\domain\Person.java
+D:\workspace\springcloudui14\src\main\java\com\wisely\ui\service\PersonService.java
+D:\workspace\springcloudui14\src\main\java\com\wisely\ui\service\hims\hystrix\PersonRemoteServiceHystrix.java
+D:\workspace\springcloudui14\src\main\java\com\wisely\ui\service\PersonHystrixService.java
+D:\workspace\springcloudui14\src\main\java\com\wisely\ui\controller\UiController.java
+D:\workspace\springcloudui14\src\main\java\com\wisely\ui\UiApplication.java
+D:\workspace\springcloudui14\src\main\java\com\wisely\ui\service\SomeHystrixService.java

@@ -1,0 +1,15 @@
+1516513984751	Rename package 'droolsdemo.query'
+1516514453848	Rename resource 'query'
+1516514648313	Delete element
+1516514651465	Delete element
+1516525677123	Rename resource 'queryex'
+1516525749236	Rename resource 'querye'
+1516527076441	Copy compilation unit
+1516527089263	Rename type 'QueryMain'
+1516527117479	Copy file
+1516527125347	Rename resource 'queryexample.drl'
+1516532386330	Copy file
+1516532477782	Copy compilation unit
+1516532494214	Rename resource 'functionexample.drl'
+1516532839311	Rename type 'FunctionMain'
+1516533295404	Rename type 'Main'

@@ -1,0 +1,5 @@
+package com.lambda.stream;
+
+public class Phone {
+
+}

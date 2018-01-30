@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="mock-security-core"/>
+<aop-project name="mock-security-browser"/>
+<aop-project name="springbootnosql"/>
+<aop-project name="springcloudui"/>
+<aop-project name="imooc-security-browser"/>
+<aop-project name="imooc-security-core"/>
+<aop-project name="imooc-security-app"/>
+<aop-project name="springcloudui14"/>
+<aop-project name="mock-security-demo"/>
+<aop-project name="springcloudperson"/>
+<aop-project name="imooc-security-demo"/>
+<aop-project name="springcloudiscovery"/>
+<aop-project name="springcloudsome"/>
+<aop-project name="springbootstatemachine"/>
+<aop-project name="mock-security-app"/>
+<aop-project name="hystrixserver"/>
+<aop-project name="springbootjms"/>
+<aop-project name="springbootbatch"/>
+<aop-project name="springcloudmonitor"/>
+<aop-project name="hystrixconsumer"/>
+</aop-reference-model>

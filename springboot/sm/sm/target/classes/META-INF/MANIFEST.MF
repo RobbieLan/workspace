@@ -1,0 +1,26 @@
+Manifest-Version: 1.0
+Implementation-Title: sm Maven Webapp
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: Administrator
+Implementation-Vendor-Id: com
+Class-Path: . lib/spring-boot-starter-1.4.2.RELEASE.jar lib/spring-boo
+ t-1.4.2.RELEASE.jar lib/spring-context-4.3.4.RELEASE.jar lib/spring-a
+ op-4.3.4.RELEASE.jar lib/spring-expression-4.3.4.RELEASE.jar lib/spri
+ ng-boot-autoconfigure-1.4.2.RELEASE.jar lib/spring-boot-starter-loggi
+ ng-1.4.2.RELEASE.jar lib/logback-classic-1.1.7.jar lib/logback-core-1
+ .1.7.jar lib/slf4j-api-1.7.21.jar lib/jcl-over-slf4j-1.7.21.jar lib/j
+ ul-to-slf4j-1.7.21.jar lib/log4j-over-slf4j-1.7.21.jar lib/spring-cor
+ e-4.3.4.RELEASE.jar lib/snakeyaml-1.17.jar lib/spring-statemachine-co
+ re-1.2.0.RELEASE.jar lib/spring-tx-4.3.4.RELEASE.jar lib/spring-beans
+ -4.3.4.RELEASE.jar lib/spring-messaging-4.3.4.RELEASE.jar lib/spring-
+ statemachine-uml-1.1.0.RELEASE.jar lib/types-2.0.0-v20140602-0749.jar
+  lib/org.eclipse.emf.ecore-2.11.1-v20150805-0538.jar lib/org.eclipse.
+ emf.common-2.11.0-v20150805-0538.jar lib/org.eclipse.emf.ecore.xmi-2.
+ 11.1-v20150805-0538.jar lib/uml-5.0.0-v20140602-0749.jar lib/common-2
+ .0.0-v20140602-0749.jar
+Build-Jdk: 1.8.0_151
+Implementation-URL: http://maven.apache.org
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+Main-Class: com.wisely.statemachine.reference.turnstile.Application
+

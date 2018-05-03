@@ -9,6 +9,7 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="droolsDrlOut"/>
 			<item value="droolsjbpm-integration-examples"/>
 		</list>
 		<list key="projectNameTemplate">
@@ -47,8 +48,21 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
-			<item value="D:\Downloads\droolsjbpm-integration-master"/>
-			<item value="D:\workspace\spring-cloud-commons-master\spring-cloud-commons"/>
+			<item value="D:\workspace\drools\CustomerSecurityManagementSystem-master"/>
+			<item value="D:\Downloads\dools\drools-master\kie-ci"/>
+			<item value="D:\workspace\drools\boot-drools"/>
+			<item value="D:\workspace\drools-spring-hello-world"/>
+			<item value="D:\workspace\drools\drools-spring-hello-world"/>
+			<item value="D:\workspace\drools\droolsIdeDemo"/>
+			<item value="D:\workspace\drools\droolsDrlOut"/>
+			<item value="D:\workspace\drools\drools-examples"/>
+			<item value="D:\workspace\drools\droolsprojectsample"/>
+			<item value="D:\workspace\droolsjbpm\drools-distribution-7.5.0.Final"/>
+			<item value="D:\workspace\droolsjbpm\drools-integration-master"/>
+			<item value="D:\workspace\imoocsecurity\imooc-security"/>
+			<item value="D:\workspace\mocksecurity\mock-security"/>
+			<item value="D:\workspace\springboot\springbootstatemachine"/>
+			<item value="D:\workspace\springboot\springbootnosql"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -93,6 +107,7 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="D:\workspace\drools\droolsIdeDemo"/>
 			<item value="D:\workspace\mock-security"/>
 			<item value="D:\workspace\springbootstatemachine"/>
 			<item value="D:\workspace\springcloudui14"/>

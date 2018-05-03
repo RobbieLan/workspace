@@ -1,23 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aop-reference-model>
-<aop-project name="mock-security-core"/>
-<aop-project name="mock-security-browser"/>
-<aop-project name="springbootnosql"/>
+<aop-project name="DroolsDrivingLicense"/>
 <aop-project name="springcloudui"/>
-<aop-project name="imooc-security-browser"/>
-<aop-project name="imooc-security-core"/>
-<aop-project name="imooc-security-app"/>
-<aop-project name="springcloudui14"/>
-<aop-project name="mock-security-demo"/>
+<aop-project name="springbootjpa"/>
+<aop-project name="springcloudui14">
+<aspect-definition advice-class-name="com.netflix.hystrix.contrib.javanica.aop.aspectj.HystrixCommandAspect" advice-method-name="methodsAnnotatedWithHystrixCommand(org.aspectj.lang.ProceedingJoinPoint)" advice-type="AROUND" aspect-end-line-number="-1" aspect-name="hystrixCommandAspect" aspect-start-line-number="-1" factory-id="org.springframework.ide.eclipse.aop.core.annotationAspectDefinitionElementFactory" file="/springcloudui14/src/main/java/com/wisely/ui/UiApplication.java" pointcut-expression="hystrixCommandAnnotationPointcut() || hystrixCollapserAnnotationPointcut()" proxy-target-class="false">
+<aop-reference advice-type="AROUND" bean="1:BeansModel|2:springcloudui14|3:java:com.wisely.ui.UiApplication|8:personHystrixService:14" bean-file="/springcloudui14/src/main/java/com/wisely/ui/service/PersonHystrixService.java" bean-start-line="14" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/springcloudui14/src/main/java/com/wisely/ui/UiApplication.java" source="=springcloudui14/C:\/Users\/Administrator\/.m2\/repository\/com\/netflix\/hystrix\/hystrix-javanica\/1.5.6\/hystrix-javanica-1.5.6.jar&lt;com.netflix.hystrix.contrib.javanica.aop.aspectj(HystrixCommandAspect.class[HystrixCommandAspect~methodsAnnotatedWithHystrixCommand~Lorg.aspectj.lang.ProceedingJoinPoint;" source-start-line="-1" target="=springcloudui14/src\/main\/java&lt;com.wisely.ui.service{PersonHystrixService.java[PersonHystrixService~save~QString;" target-start-line="20"/>
+<aop-reference advice-type="AROUND" bean="1:BeansModel|2:springcloudui14|3:java:com.wisely.ui.UiApplication|8:personHystrixService:14" bean-file="/springcloudui14/src/main/java/com/wisely/ui/service/PersonHystrixService.java" bean-start-line="14" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/springcloudui14/src/main/java/com/wisely/ui/UiApplication.java" source="=springcloudui14/C:\/Users\/Administrator\/.m2\/repository\/com\/netflix\/hystrix\/hystrix-javanica\/1.5.6\/hystrix-javanica-1.5.6.jar&lt;com.netflix.hystrix.contrib.javanica.aop.aspectj(HystrixCommandAspect.class[HystrixCommandAspect~methodsAnnotatedWithHystrixCommand~Lorg.aspectj.lang.ProceedingJoinPoint;" source-start-line="-1" target="=springcloudui14/src\/main\/java&lt;com.wisely.ui.service{PersonHystrixService.java[PersonHystrixService~get~QLocalDateTime;~QDate;" target-start-line="32"/>
+</aspect-definition>
+</aop-project>
 <aop-project name="springcloudperson"/>
-<aop-project name="imooc-security-demo"/>
 <aop-project name="springcloudiscovery"/>
+<aop-project name="springbootdrools"/>
 <aop-project name="springcloudsome"/>
-<aop-project name="springbootstatemachine"/>
-<aop-project name="mock-security-app"/>
-<aop-project name="hystrixserver"/>
 <aop-project name="springbootjms"/>
-<aop-project name="springbootbatch"/>
-<aop-project name="springcloudmonitor"/>
-<aop-project name="hystrixconsumer"/>
+<aop-project name="springcloudconfig"/>
+<aop-project name="drools-spring-hello-world"/>
 </aop-reference-model>

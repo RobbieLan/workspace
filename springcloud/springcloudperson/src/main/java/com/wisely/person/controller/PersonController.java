@@ -1,7 +1,8 @@
 package com.wisely.person.controller;
 
-
+import java.time.LocalDateTime;
 import java.io.IOException;
+import java.util.Date;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -10,6 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -45,7 +48,14 @@ public class PersonController {
     	System.out.println("--------------after response.getWriter.print");
 //        return people;
     }
- 
-
+    
+    @ApiOperation(httpMethod="GET",value="日期测试",notes="日期测试")
+    @RequestMapping(value = "/get", method = RequestMethod.GET)
+    @ResponseBody
+    public void getPerson(@RequestParam (value="date1", required=false)Date date1,
+    		@RequestParam (value="date2", required=false)LocalDateTime date2) {
+    	int a=1+1;
+    	int b=a++;
+    }
 
 }

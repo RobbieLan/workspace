@@ -4,8 +4,8 @@
 		<item value="drools"/>
 	</list>
 	<section name="WorkbenchPreferenceDialogSettings">
-		<item value="301" key="DIALOG_X_ORIGIN"/>
-		<item value="126" key="DIALOG_Y_ORIGIN"/>
+		<item value="545" key="DIALOG_X_ORIGIN"/>
+		<item value="93" key="DIALOG_Y_ORIGIN"/>
 	</section>
 	<section name="org.eclipse.ui.internal.QuickAccess">
 		<item value="-1" key="dialogHeight"/>
@@ -20,10 +20,9 @@
 		</list>
 	</section>
 	<section name="NewWizardAction">
-		<item value="org.drools.eclipse.wizards.new.project" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
+		<item value="org.eclipse.jdt.ui.wizards.NewClassCreationWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
 		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
-			<item value="org.drools.eclipse.new"/>
-			<item value="org.eclipse.jst.ejb.ui"/>
+			<item value="org.eclipse.jdt.ui.java"/>
 		</list>
 	</section>
 	<section name="ImportExportAction">

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kmodule xmlns="http://www.drools.org/xsd/kmodule">
+
+	<kbase name="queryExample" packages="droolsdemo.queryex">
+        <ksession name="queryExampleSession"/>
+    </kbase>
+    
+	<kbase name="functionExample" packages="droolsdemo.functionex">
+        <ksession name="functionExampleSession"/>
+    </kbase>
+    
+	<kbase name="declareExample" packages="springbootdrools.declareex">
+        <ksession name="declareExampleSession"/>
+    </kbase>
+    
+</kmodule>

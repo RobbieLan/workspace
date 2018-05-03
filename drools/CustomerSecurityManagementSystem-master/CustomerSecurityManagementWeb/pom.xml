@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.elulian</groupId>
+		<artifactId>CustomerSecurityManagementSystem</artifactId>
+		<version>0.1-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>CustomerSecurityManagementWeb</artifactId>
+
+	<packaging>war</packaging>
+
+	<name>CustomerSecurityManagementWeb</name>
+
+	<dependencies>
+        <dependency>
+            <groupId>org.javasimon</groupId>
+            <artifactId>javasimon-console-embed</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.javasimon</groupId>
+            <artifactId>javasimon-javaee</artifactId>
+        </dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+		</dependency>
+		<!-- for struts -->
+		<dependency>
+			<groupId>org.apache.struts</groupId>
+			<artifactId>struts2-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.struts</groupId>
+			<artifactId>struts2-convention-plugin</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.struts</groupId>
+			<artifactId>struts2-spring-plugin</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.struts</groupId>
+			<artifactId>struts2-json-plugin</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.struts</groupId>
+			<artifactId>struts2-sitemesh-plugin</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.struts</groupId>
+			<artifactId>struts2-dojo-plugin</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.struts</groupId>
+			<artifactId>struts2-jfreechart-plugin</artifactId>
+		</dependency>
+		<!-- <dependency> <groupId>commons-fileupload</groupId> <artifactId>commons-fileupload</artifactId> 
+			<version>${commons.fileupload.version}</version> </dependency> <dependency> 
+			<groupId>commons-io</groupId> <artifactId>commons-io</artifactId> <version>${commons.io.version}</version> 
+			</dependency> -->
+		<!-- for struts end -->
+		<dependency>
+			<groupId>jstl</groupId>
+			<artifactId>jstl</artifactId>
+		</dependency>
+		<!-- <dependency> <groupId>displaytag</groupId> <artifactId>displaytag</artifactId> 
+			<version>${displaytag.version}</version> <exclusions> <exclusion> <groupId>org.slf4j</groupId> 
+			<artifactId>jcl104-over-slf4j</artifactId> </exclusion> </exclusions> </dependency> -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>jsp-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.tuckey</groupId>
+			<artifactId>urlrewritefilter</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.jmock</groupId>
+			<artifactId>jmock</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.jmock</groupId>
+			<artifactId>jmock-junit4</artifactId>
+		</dependency>
+		<!-- Upgrade junit-dep used by jmock The artifact junit:junit-dep:jar:4.11 
+			has been relocated to junit:junit:jar:4.11 <dependency> <groupId>junit</groupId> 
+			<artifactId>junit-dep</artifactId> <version>${project.junitVersion}</version> 
+			<scope>test</scope> </dependency> -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+		</dependency>
+		<!-- <dependency> <groupId>org.subethamail</groupId> <artifactId>subethasmtp-wiser</artifactId> 
+			<version>${project.wiserVersion}</version> <scope>test</scope> </dependency> -->
+		<!-- for sitemesh -->
+
+		<!-- for sitemesh end -->
+		<!-- for jfreechar -->
+		<dependency>
+			<groupId>jfree</groupId>
+			<artifactId>jfreechart</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>jfree</groupId>
+			<artifactId>jcommon</artifactId>
+		</dependency>
+		<!-- for jfreechar end -->
+		<!-- for apache common configuration -->
+		<dependency>
+			<groupId>commons-configuration</groupId>
+			<artifactId>commons-configuration</artifactId>
+			<!-- <exclusions> <exclusion> <groupId>commons-lang</groupId> <artifactId>commons-lang</artifactId> 
+				</exclusion> </exclusions> -->
+		</dependency>
+		<dependency>
+			<groupId>commons-beanutils</groupId>
+			<artifactId>commons-beanutils</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>commons-jxpath</groupId>
+			<artifactId>commons-jxpath</artifactId>
+		</dependency>
+		<!-- for apache common configuration end -->
+
+		<!-- for jasperreport -->
+		<dependency>
+			<groupId>net.sf.jasperreports</groupId>
+			<artifactId>jasperreports</artifactId>
+		</dependency>
+		<!-- <dependency>
+			<groupId>com.lowagie</groupId>
+			<artifactId>itext</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.keypoint</groupId>
+			<artifactId>png-encoder</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.codehaus.groovy</groupId>
+			<artifactId>groovy-all</artifactId>
+		</dependency> -->
+
+		<dependency>
+			<groupId>org.apache.struts</groupId>
+			<artifactId>struts2-jasperreports-plugin</artifactId>
+		</dependency>
+		<!-- for jasperreport end -->
+                <dependency>
+                        <groupId>org.webjars</groupId>
+                        <artifactId>bootstrap</artifactId>
+                </dependency>
+                <dependency>
+                        <groupId>org.webjars</groupId>
+                        <artifactId>jquery-cookie</artifactId>
+                </dependency>
+                <dependency>
+                        <groupId>org.webjars</groupId>
+                        <artifactId>dojo</artifactId>
+                </dependency>
+		<dependency>
+			<groupId>com.elulian</groupId>
+			<artifactId>CustomerSecurityManagementService</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<defaultGoal>install</defaultGoal>
+<pluginManagement>
+<plugins>
+                    <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-eclipse-plugin</artifactId>
+                    <version>${project.eclipsePluginVersion}</version>
+                    <configuration>
+                        <!-- aligned with Using maven-eclipse-plugin in multi-module projects 
+                            with WTP -->
+                        <!-- http://maven.apache.org/plugins/maven-eclipse-plugin/examples/multi-module-projects.html -->
+                        <projectNameTemplate>[artifactId]-[version]</projectNameTemplate>
+                        <wtpmanifest>true</wtpmanifest>
+                        <downloadSources>false</downloadSources>
+                        <downloadJavadocs>false</downloadJavadocs>
+                        <wtpapplicationxml>true</wtpapplicationxml>
+                        <wtpversion>${project.wtpVersion}</wtpversion>
+                        <!-- <additionalBuildcommands> <buildCommand> <name> de.mvmsoft.checkclipse.CheckclipseBuilder 
+                            </name> </buildCommand> </additionalBuildcommands> <additionalProjectnatures> 
+                            <projectnature> de.mvmsoft.checkclipse.CheckclipseNature </projectnature> 
+                            </additionalProjectnatures> <additionalConfig> <file> <name>.checkclipse</name> 
+                            <content> enabled=true projectclassloader=false </content> </file> </additionalConfig> -->
+                    </configuration>
+                </plugin>
+</plugins>
+</pluginManagement>
+		<plugins>
+
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>native2ascii-maven-plugin</artifactId>
+				<version>1.0-beta-1</version>
+				<executions>
+					<execution>
+						<id>native2ascii-utf8</id>
+						<!-- default phase <phase>process-classes</phase> -->
+						<goals>
+							<goal>native2ascii</goal>
+						</goals>
+						<configuration>
+							<encoding>UTF8</encoding>
+							<includes>
+								<include>globalMessages_zh*.properties</include>
+								<include>branch.properties</include>
+							</includes>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.mortbay.jetty</groupId>
+				<artifactId>jetty-maven-plugin</artifactId>
+				<version>${project.jettyPluginVersion}</version>
+				<configuration>
+					<!-- for oom use -XX:PermSize=128m -XX:MaxPermSize=256m -Xmx1024m -Xms1024m for MAVEN_OPTS -->
+					<jvmArgs>-Dcom.sun.management.jmxremote</jvmArgs>
+					<!-- <stopPort>8087</stopPort>
+                    <stopKey>stop</stopKey> -->
+					<jettyConfig>src/test/resources/jetty-jmx.xml</jettyConfig>
+					<scanIntervalSeconds>10</scanIntervalSeconds> 
+					<webApp>
+						<contextPath>${project.web.deployname}</contextPath>					
+					</webApp>
+					<!-- <war>${basedir}/target/${project.web.deployname}-${project.version}.war</war> -->
+				</configuration>
+			</plugin>
+			<!-- clean-up previous hibernate-search indexed from integration tests, 
+				as there could be a lock -->
+
+			<!-- will package a ready-to-run app regarding hibernate-search index 
+				location -->
+			<plugin>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>${project.warPluginVersion}</version>
+				<configuration>
+					<escapeString>\</escapeString>
+					<!-- <webResources> <resource> <directory>src/main/resources/packaged</directory> 
+						<targetPath>WEB-INF/classes</targetPath> <filtering>true</filtering> <includes> 
+						<include>hibernate.properties</include> </includes> </resource> </webResources> -->
+				</configuration>
+			</plugin>
+<plugin>
+                        <groupId>org.codehaus.cargo</groupId>
+                        <artifactId>cargo-maven2-plugin</artifactId>
+                        <version>${project.cargoPluginVersion}</version>
+                        <configuration>
+                            <!--  use cargo:run instead of cargo:start, wait default false means
+                                  container will close after mvn life cycle
+                                  see http://cargo.codehaus.org/Maven2+Plugin+Reference+Guide for more details -->
+                            <container>
+                                <containerId>${project.cargo.container}</containerId>
+                                <!-- container home -->
+                                <!-- already has a container installed 
+                                <type>installed</type>
+                                <home>${project.cargo.container.home}</home>
+                                -->
+                                <!-- download from remote for the first time, later use existing one-->
+                                <zipUrlInstaller>
+                                    <url>${project.cargo.container.url}</url>
+                                    <downloadDir>${project.build.directory}/${project.cargo.container}/downloads</downloadDir>
+                                    <extractDir>${project.build.directory}/${project.cargo.container}/extracts</extractDir>
+                                </zipUrlInstaller>
+                                <log>${project.build.directory}/logs/container.log</log>
+                                <output>${project.build.directory}/logs/container.out</output>
+                            </container>
+                            <configuration>
+                                <!-- deploy home -->
+                                <home>${project.build.directory}/${project.cargo.container}/container</home>
+                                <!-- <type>existing</type> -->
+                                <properties>
+                                    <project.cargo.hostname>${project.cargo.host}</project.cargo.hostname>
+                                    <cargo.servlet.port>${project.cargo.port}</cargo.servlet.port>
+                                    <!-- To prevent conflicts with already running instances -->
+                                    <cargo.servlet.uriencoding>${project.build.sourceEncoding}</cargo.servlet.uriencoding>
+                                    <!-- <cargo.tomcat.ajp.port>8123</cargo.tomcat.ajp.port> 
+                                         <cargo.tomcat.manager.protocol>http</cargo.tomcat.manager.protocol>   
+                                        <cargo.tomcat.manager.hostname>127.0.0.1</cargo.tomcat.manager.hostname>   
+                                        <cargo.tomcat.manager.port>8080</cargo.tomcat.manager.port>   
+                                        <cargo.tomcat.manager.username>admin</cargo.tomcat.manager.username>   
+                                        <cargo.tomcat.manager.password>1234</cargo.tomcat.manager.password> -->
+                                </properties>
+                                <!-- for remote deploy, also container type should be remote
+                                    <type>runtime</type>
+                                    <properties>
+                                      <cargo.remote.username>username</cargo.remote.username>
+                                      <cargo.remote.password>password</cargo.remote.password>
+                                    </properties> -->
+                            </configuration>
+                            <deployables>  
+                                   <deployable>  
+                                     <!-- group/artifact使用默认值部署本应用，默认从maven output获取部署包，可以在location中指定  
+                                      <groupId>war group id</groupId>  
+                                      <artifactId>war artifact id</artifactId>  
+                                      <location> war location</location>  
+                                     -->  
+                                     <type>war</type>  
+                                     <properties>  
+                                        <context>CustomerSecurityManagementWeb</context>  
+                                     </properties>  
+                                     <!--
+                                     <pingURL>optional url to ping to know if deployable is done or not</pingURL>  
+                                     <pingTimeout>optional timeout to ping (default 20000 milliseconds)</pingTimeout>  
+                                     -->
+                                   </deployable>  
+                            </deployables>  
+                            <packager>
+                                    <outputLocation>${project.build.directory}/packaged</outputLocation>
+                            </packager>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <id>start-container</id>
+                                <phase>pre-integration-test</phase>
+                                <goals>
+                                    <goal>start</goal>
+                                </goals>
+                            </execution>
+                            <execution>
+                                <id>stop-container</id>
+                                <phase>post-integration-test</phase>
+                                <goals>
+                                    <goal>stop</goal>
+                                </goals>
+                            </execution>
+                            <execution>
+                                <id>package-container</id>
+                                <phase>post-integration-test</phase>
+                                <goals>
+                                    <goal>package</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                     <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>webtest-maven-plugin</artifactId>
+                        <version>1.0.0</version>
+                        <dependencies>
+                           <!-- Upgrade HtmlUnit to support jQuery 1.9 -->
+                           <dependency>
+                              <groupId>net.sourceforge.htmlunit</groupId>
+                              <artifactId>htmlunit</artifactId>
+                              <version>${project.htmlunitVersion}</version>
+                           </dependency>
+                           <dependency>
+                             <groupId>xml-apis</groupId>
+                             <artifactId>xml-apis</artifactId>
+                             <version>${project.xml-apisVersion}</version>
+                           </dependency>
+                           <dependency>
+                             <groupId>commons-lang</groupId>
+                             <artifactId>commons-lang</artifactId>
+                             <version>${project.commons-langVersion}</version>
+                           </dependency>
+                        </dependencies>
+                        <executions>
+                            <execution>
+                                <id>webtest-test</id>
+                                <phase>integration-test</phase>
+                                <goals>
+                                    <goal>test</goal>
+                                </goals>
+                            </execution>
+                            <execution>
+                                <id>webtest-verify</id>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>verify-result</goal>
+                                </goals>
+                            </execution>
+                            <execution>
+                                <id>webtest-report-html</id>
+                                <phase>post-integration-test</phase>
+                                <goals>
+                                    <goal>report</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                        <configuration>
+                            <host>${project.cargo.host}</host>
+                            <port>${project.cargo.port}</port>
+                            <sourcedirectory>src/test/resources</sourcedirectory>
+                            <sourcefile>web-tests.xml</sourcefile>
+                            <target>${project.webtest.target}</target>
+                            <basepath>CustomerSecurityManagementWeb</basepath>
+                            <resultpath>target/webtest/webtest-results</resultpath>
+                            <autorefresh>true</autorefresh>
+                            <haltonfailure>false</haltonfailure>
+                            <haltonerror>false</haltonerror>
+                            <loglevel>debug</loglevel>
+                            <!-- <loglevel>fatal</loglevel> -->
+                        </configuration>
+                    </plugin>
+		</plugins>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+			</resource>
+			<resource>
+				<directory>src/main/java</directory>
+				<filtering>true</filtering>
+				<includes>
+					<include>**/*.xml</include>
+				</includes>
+			</resource>
+			<resource>
+                <directory>../CustomerSecurityManagementDAO/src/main/java</directory>
+                <filtering>true</filtering>
+                <includes>
+                    <include>**/applicationContext-dao.xml</include>
+                </includes>
+            </resource>
+            <resource>
+                <directory>../CustomerSecurityManagementDAO/src/main/resources</directory>
+                <filtering>true</filtering>
+                <includes>
+                    <include>**/applicationContext-resources.xml</include>
+                </includes>
+            </resource>
+            <resource>
+                <directory>../CustomerSecurityManagementService/src/main/java</directory>
+                <filtering>true</filtering>
+                <includes>
+                    <include>**/applicationContext-service.xml</include>
+                </includes>
+            </resource>
+		</resources>
+		<testResources>
+			<testResource>
+				<directory>src/test/resources</directory>
+				<filtering>true</filtering>
+			</testResource>
+			<testResource>
+				<directory>src/main/webapp</directory>
+				<filtering>true</filtering>
+				<includes>
+					<include>**/*.xml</include>
+				</includes>
+			</testResource>
+			<!-- include config files in main folder for testing -->
+			<testResource>
+				<directory>src/main/java</directory>
+				<filtering>true</filtering>
+				<includes>
+					<include>**/applicationContext*.xml</include>
+				</includes>
+			</testResource>
+			<testResource>
+				<directory>src/main/resources</directory>
+				<includes>
+					<include>**/applicationContext*.xml</include>
+				</includes>
+				<filtering>true</filtering>
+			</testResource>
+			<testResource>
+                <directory>../CustomerSecurityManagementDAO/src/main/java</directory>
+                <filtering>true</filtering>
+                <includes>
+                    <include>**/applicationContext-dao.xml</include>
+                </includes>
+            </testResource>
+            <testResource>
+                <directory>../CustomerSecurityManagementDAO/src/main/resources</directory>
+                <filtering>true</filtering>
+                <includes>
+                    <include>**/applicationContext-resources.xml</include>
+                </includes>
+            </testResource>
+			<testResource>
+				<directory>../CustomerSecurityManagementService/src/main/java</directory>
+				<filtering>true</filtering>
+				<includes>
+					<include>**/applicationContext-service.xml</include>
+				</includes>
+			</testResource>
+		</testResources>
+	</build>
+</project>

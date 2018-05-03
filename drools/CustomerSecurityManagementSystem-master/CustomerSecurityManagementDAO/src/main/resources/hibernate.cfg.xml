@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<!-- NOTE: If you're working offline, you might have to change the DOCTYPE to the following:
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">-->
+<hibernate-configuration>
+ <session-factory name="">
+  <mapping class="com.elulian.CustomerSecurityManagementSystem.vo.Role"/>
+  <mapping class="com.elulian.CustomerSecurityManagementSystem.vo.UserInfo"/>
+  <mapping class="com.elulian.CustomerSecurityManagementSystem.vo.CustomerInfo"/>
+  <mapping class="com.elulian.CustomerSecurityManagementSystem.vo.RiskRank"/>
+  <mapping class="com.elulian.CustomerSecurityManagementSystem.vo.Threshold"/>
+  <class-cache
+   class="com.elulian.CustomerSecurityManagementSystem.vo.Role"
+   include="non-lazy" usage="read-only"/>
+  <class-cache
+   class="com.elulian.CustomerSecurityManagementSystem.vo.UserInfo"
+   include="non-lazy" usage="transactional"/>
+  <class-cache
+   class="com.elulian.CustomerSecurityManagementSystem.vo.CustomerInfo"
+   include="all" usage="read-write"/>
+  <class-cache
+   class="com.elulian.CustomerSecurityManagementSystem.vo.RiskRank"
+   include="all" usage="transactional"/>
+  <class-cache
+   class="com.elulian.CustomerSecurityManagementSystem.vo.Threshold"
+   include="all" usage="read-write"/>
+  <collection-cache
+   collection="com.elulian.CustomerSecurityManagementSystem.vo.UserInfo.roles" usage="transactional"/>
+ </session-factory>
+</hibernate-configuration>

@@ -25,4 +25,18 @@
 <fullyQualifiedTypeName name="org.kie.internal.runtime.StatefulKnowledgeSession"/>
 <fullyQualifiedTypeName name="org.kie.internal.logger.KnowledgeRuntimeLoggerFactory"/>
 <fullyQualifiedTypeName name="org.kie.api.logger.KieRuntimeLogger"/>
+<fullyQualifiedTypeName name="org.kie.api.builder.model.KieModuleModel"/>
+<fullyQualifiedTypeName name="org.kie.api.builder.model.KieBaseModel"/>
+<fullyQualifiedTypeName name="org.kie.api.conf.EqualityBehaviorOption"/>
+<fullyQualifiedTypeName name="org.kie.api.conf.EventProcessingOption"/>
+<fullyQualifiedTypeName name="org.kie.api.builder.model.KieSessionModel"/>
+<fullyQualifiedTypeName name="org.kie.api.builder.KieFileSystem"/>
+<fullyQualifiedTypeName name="org.kie.api.runtime.conf.ClockTypeOption"/>
+<fullyQualifiedTypeName name="org.junit.Ignore"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RestController"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ResponseBody"/>
+<fullyQualifiedTypeName name="java.time.LocalDateTime"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
 </qualifiedTypeNameHistroy>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+            http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+           	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.1.xsd"
+	default-lazy-init="true">
+	
+	<bean class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor"/> 
+	
+	<bean class="org.springframework.orm.hibernate4.HibernateExceptionTranslator" />
+
+	
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean"
+		destroy-method="destroy">
+		<property name="dataSource" ref="hikariCPDataSource" />
+		<property name="configLocation">
+		    <value> classpath:hibernate.cfg.xml </value>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">${project.hibernateDialect}</prop>
+				<!-- Booleans can be easily used in expressions by 
+				     declaring HQL query substitutions in Hibernate configuration -->
+				<prop key="hibernate.query.substitutions">true 'Y', false 'N'</prop>
+				<!-- http://ehcache.org/documentation/integrations/hibernate -->
+				<!-- http://www.tutorialspoint.com/hibernate/hibernate_caching.htm -->
+				<prop key="hibernate.cache.use_second_level_cache">true</prop>
+				<!-- org.hibernate.cache.ehcache.EhCacheRegionFactory -->
+				<prop key="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.SingletonEhCacheRegionFactory</prop>
+				<!-- hibernate只会缓存使用load()方法获得的单个持久化对象，如果想缓存使用findall()、 list()、Iterator()、createCriteria()、createQuery()
+				                等方法获得的数据结果集的话，就需要设置hibernate.cache.use_query_cache true  -->
+				<prop key="hibernate.cache.use_query_cache">true</prop>
+				<prop key="hibernate.cache.provider_configuration_file_resource_path">ehcache_standalone.xml</prop>
+				<!-- Hibernate Search index directory
+				<prop key="hibernate.search.default.indexBase">${app.search.index.basedir}</prop> -->
+			</props>
+		</property>
+	</bean> 
+	
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<!-- Activates scanning of @Autowired -->
+	<context:annotation-config />
+
+	<!-- Activates scanning of @Repository -->
+	<context:component-scan
+		base-package="com.elulian.CustomerSecurityManagementSystem.dao.impl.hibernate" />
+
+    <!-- hibernate & ehcache performance jmx monitoring -->
+    
+<!--     <context:mbean-server /> -->
+   
+    <bean id="mbeanExporter" class="org.springframework.jmx.export.MBeanExporter" lazy-init="false">
+        <property name="beans">
+            <map>
+                <entry key="com.elulian.CustomerSecurityManagementSystem:name=hibernateStatisticsMBean"
+                    value-ref="hibernateStatisticsMBean" />
+<!--                 <entry key="com.elulian:name=htmlAdaptor" value-ref="htmlAdaptor" /> -->                
+            </map>
+        </property>
+         <property name="server" ref="mbeanServer"/>
+    </bean>
+    <bean name="hibernateStatisticsMBean" class="org.hibernate.jmx.StatisticsService">
+        <property name="sessionFactory" ref="sessionFactory" />
+        <property name="statisticsEnabled" value="true" />
+    </bean>
+
+    <!-- JMX for ehcache -->
+     <bean id="ehCacheMBeanRegistration"
+                class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+
+                <property name="staticMethod"
+                        value="net.sf.ehcache.management.ManagementService.registerMBeans"/>
+                <property name="arguments">
+                        <list>
+                                <ref bean="cacheManager"/>
+                                <ref bean="mbeanServer"/>
+                                <value>true</value>
+                                <value>true</value>
+                                <value>true</value>
+                                <value>true</value>
+                        </list>
+                </property>
+        </bean>
+ 
+    <bean id="cacheManager" class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean">
+      <property name="configLocation" value="classpath:ehcache_standalone.xml"/>
+      <property name="shared" value="true"/>
+    </bean>
+ 
+    <bean id="mbeanServer" class="org.springframework.jmx.support.MBeanServerFactoryBean">
+      <property name="locateExistingServerIfPossible" value="true"/>
+    </bean>
+
+	<!-- It is not necessary to configure a Spring loadTimeWeaver when using 
+		OpenJPA build time enhancement. The following warning message will be logged 
+		by OpenJPA when creating an EntityManagerFactory but it can be safely ignored. 
+		WARN [main] while registering a ClassTransformer with PersistenceUnitInfo: 
+		name 'PuName', root URL [file:/.../]. The error has been consumed. To see 
+		it, set your openjpa.Runtime log level to TRACE. Load-time class transformation 
+		will not be available. -->
+
+	<!-- mysqlOpenJPA mysqlHibernateJPA -->
+	<!-- openjpaVendorAdapter hibernateJpaVendorAdapter -->
+	<!-- Specify the JpaVendorAdapter implementation for the desired JPA provider, if any. 
+	        This will initialize appropriate defaults for the given provider, 
+	        such as persistence provider class and JpaDialect, unless locally overridden in this FactoryBean -->
+	<!-- <bean id="entityManagerFactory"
+		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+		<property name="persistenceUnitName" value="mysqlOpenJPA" /> 
+		<property name="dataSource" ref="hikariCPDataSource" />
+		
+		<property name="jpaVendorAdapter" ref="openjpaVendorAdapter" /> 
+			
+			JPA properties would usually be specified in the persistence.xml file; 
+			alternatively, the properties can be specified directly to the entity manager factory bean:
+			 <property name="jpaProperties">
+            <value>
+                hibernate.cache.use_second_level_cache = true
+                hibernate.cache.region.factory_class = org.hibernate.cache.ehcache.EhCacheRegionFactory
+                hibernate.cache.use_query_cache = true
+                hibernate.generate_statistics = true
+            </value>
+         </property>
+	</bean>
+	
+	<bean id="openjpaVendorAdapter" class="org.springframework.orm.jpa.vendor.OpenJpaVendorAdapter">
+                <property name="showSql" value="false" />
+                <property name="generateDdl" value="true" />
+                <property name="databasePlatform"
+                    value="org.apache.openjpa.jdbc.sql.MySQLDictionary" />
+            </bean>
+            
+
+	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+		<property name="entityManagerFactory" ref="entityManagerFactory" />
+		<property name="dataSource" ref="hikariCPDataSource" />
+	</bean> -->
+	
+	<!--     <bean id="hibernateJpaVendorAdapter" class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
+                <property name="showSql" value="false" />
+                <property name="generateDdl" value="true" />
+                <property name="databasePlatform"
+                    value="org.hibernate.dialect.MySQL5Dialect" />
+            </bean> -->
+
+</beans>

@@ -1,5 +1,7 @@
 package com.wisely.ui.controller;
 
+import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +25,10 @@ public class UiController {
 	@RequestMapping("/dispatch")
 	public List<Person> sendMessage(@RequestBody String personName) {
 		return personHystrixService.save(personName);
+	}
+	@RequestMapping("/get")
+	public void get() {
+		personHystrixService.get(LocalDateTime.now(),new Date());
 	}
 	
 	@RequestMapping(value = "/getsome",produces={MediaType.TEXT_PLAIN_VALUE})

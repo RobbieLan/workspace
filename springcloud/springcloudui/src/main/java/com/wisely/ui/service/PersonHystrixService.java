@@ -1,6 +1,8 @@
 package com.wisely.ui.service;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,5 +26,12 @@ public class PersonHystrixService {
 		Person p = new Person(name+"没有保存成功，Person Service 故障");
 		list.add(p);
 		return list;
+	}
+	@HystrixCommand(fallbackMethod = "fallbackSave") //1
+	public void get(LocalDateTime date1, Date date2) {
+		personService.get(date1, date2);
+	}
+	
+	public void fallbackGet(LocalDateTime date1, Date date2){ 
 	}
 }

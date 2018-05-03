@@ -148,4 +148,7 @@
 			<item value=""/>
 		</list>
 	</section>
+	<section name="org.eclipse.ui.internal.ide.dialogs.ProjectContentsLocationArea">
+		<item value="D:\workspace\drools" key="OUTSIDE_LOCATION"/>
+	</section>
 </section>

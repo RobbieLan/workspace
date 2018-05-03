@@ -1,39 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workingSetManager>
 <workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1515812003897_5" label="springcloud" name="springcloud">
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/springcloudconfig" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/springcloudiscovery" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/springcloudmonitor" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/springcloudperson" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/springcloudsome" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/springcloudui" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/springcloudui14" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/springcloudconfig" type="4"/>
+<item elementID="=springcloudui14" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/springcloudperson" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/springcloudiscovery" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/springcloudsome" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/springcloudmonitor" type="4"/>
 </workingSet>
 <workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1515812027931_6" label="springboot" name="springboot">
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/sm" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/springbootbatch" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/springbootentrep" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/springbootjms" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/springbootjpa" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/springbootnosql" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/springbootstatemachine" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/springbootjms" type="4"/>
+<item elementID="=springbootjpa" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/springbootentrep" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/springbootbatch" type="4"/>
 </workingSet>
 <workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1515812048543_7" label="mocksecurity" name="mocksecurity">
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/mock-security" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/mock-security-app" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/mock-security-browser" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/mock-security-core" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/mock-security-app" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/mock-security-demo" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/mock-security" type="4"/>
 </workingSet>
 <workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1515812067798_8" label="imoocsecurity" name="imoocsecurity">
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/imooc-security" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/imooc-security-app" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/imooc-security-browser" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/imooc-security-core" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/imooc-security-app" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/imooc-security" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/imooc-security-demo" type="4"/>
 </workingSet>
 <workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1516417371451_10" label="drools" name="drools">
+<item elementID="=DroolsDrivingLicense" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/CustomerSecurityManagementSystem" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/CustomerSecurityManagementService" type="4"/>
+<item elementID="=droolsDrlOut" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/CustomerSecurityManagementWeb" type="4"/>
+<item elementID="=springbootdrools" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=droolsdemo" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/kie-ci" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/CustomerSecurityManagementRules" type="4"/>
+<item elementID="=droolsIdeDemo" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/CustomerSecurityManagementDAO" type="4"/>
 </workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1514181553679_0" label="Window Working Set" name="Aggregate for window 1514181553679"/>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1514772168421_2" label="Window Working Set" name="Aggregate for window 1514772168421"/>

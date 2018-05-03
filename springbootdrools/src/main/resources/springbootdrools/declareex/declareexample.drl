@@ -1,0 +1,26 @@
+package springbootdrools.declareex
+
+import java.util.Date
+
+declare Address
+   number : int
+   streetName : String
+   city : String
+end
+
+declare Person
+    @author( Bob )
+    @dateOfCreation( 01-Feb-2009 )
+
+    name : String @key @maxLength( 30 )
+    dateOfBirth : Date
+    address : Address
+end
+
+rule "call declared type" when
+	eval(true)
+then
+	Person p=new Person("Jimmy",new Date(),new Address(123,"Siping Rd.","ShangHai"));
+	System.out.println("name---------"+p.getName());
+	System.out.println("street---------"+p.getAddress().getStreetName());
+end
